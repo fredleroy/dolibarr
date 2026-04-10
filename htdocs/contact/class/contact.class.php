@@ -1070,7 +1070,7 @@ class Contact extends CommonObject
 				$this->error = 'Fetch found several records. Rename one of contact to avoid duplicate.';
 				dol_syslog($this->error, LOG_ERR);
 
-				return 2;
+				return -2;
 			} elseif ($num) {   // $num = 1
 				$obj = $this->db->fetch_object($resql);
 
